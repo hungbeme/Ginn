@@ -109,7 +109,7 @@ body.show {
   gap: 1rem;
   box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.05);
   padding: 3.125rem 0 0 0rem;
-  transition: all 0.5s !important;
+  transition: all 0.3s !important;
   z-index: 9;
 }
 
@@ -183,8 +183,10 @@ body.show {
 
 /* HERO SECTION */
 section {
-  padding: 5rem 0.5rem;
-  padding: 5rem 0.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
 }
 
 .herosection {
