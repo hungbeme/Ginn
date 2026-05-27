@@ -145,6 +145,6 @@ const joinGinnBtn = document.querySelectorAll(".join");
 joinGinnBtn.forEach((el) => {
   el.addEventListener("click", function (e) {
     e.preventDefault();
-    window.location.href = "/register.html";
+    window.location.href = "./register.html";
   });
 });
