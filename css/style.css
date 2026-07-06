@@ -435,6 +435,8 @@ h3 {
 .SubscribeDiv {
   display: flex;
   flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .inputDiv {
@@ -449,15 +451,18 @@ h3 {
 input {
   padding: 0.25rem;
   font-size: 1.125rem;
+  border-radius: 0.625rem;
+  background: none;
+  color: #1a1a1a;
 }
 
 .SubscribeBtn {
   font-family: inherit;
-  padding: 0.75rem;
+  padding: 0.625rem;
   border: none;
   background-color: var(--btnBackground);
   color: var(--btnColor);
-  border-radius: 0.5rem;
+  border-radius: 0.625rem;
   font-size: 1.125rem;
 }
 
@@ -783,6 +788,13 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     color: var(--Background);
+
+    /* .newsletterSection { */
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; */
+    /* } */
   }
 
   .newsletterDiv {
@@ -793,6 +805,14 @@ img {
 
   .newsletterImg {
     display: none;
+  }
+
+  .SubscribeDiv {
+    width: 50%;
+  }
+
+  input {
+    color: #f2f2f2;
   }
 
   /* FOOTER */

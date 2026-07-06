@@ -31,7 +31,6 @@ form.addEventListener("submit", async function (e) {
   try {
     message.textContent = "Submitting...";
     message.style.color = "#0f1d45";
-
     const formData = new FormData(form);
 
     const response = await fetch(FORMSPREE_URL, {
@@ -43,15 +42,15 @@ form.addEventListener("submit", async function (e) {
     });
 
     if (response.ok && response.status === 200) {
-      message.textContent = "Registration successful 🎉";
+      message.textContent = "Registration successful";
       message.style.color = "green";
       form.reset();
     } else {
-      message.textContent = "Something went wrong. Try again.";
+      message.textContent = "Something went wrong. Try again!";
       message.style.color = "red";
     }
   } catch (error) {
-    message.textContent = "Network error. Check your connection.";
+    message.textContent = "Network error. Check your connection!";
     message.style.color = "red";
   }
 });

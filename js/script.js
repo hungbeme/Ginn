@@ -97,17 +97,13 @@ obs.observe(sectionEl);
 
 const form = document.getElementById("newsletter-form");
 const statusMsg = document.getElementById("form-status");
-const inputEmail = document.getElementById("email");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
+  statusMsg.textContent = "Subscribing...";
+  statusMsg.style.color = "#0d48eb";
   const data = new FormData(form);
-  //   console.log("submitted");
-  //   console.log("data");
-
-  console.log(inputEmail.value);
-  //   if (inputEmail.value !== "") {
   try {
     const response = await fetch("https://formspree.io/f/mdajpvgo", {
       method: "POST",
@@ -117,27 +113,24 @@ form.addEventListener("submit", async (e) => {
       },
     });
 
-    console.log(response);
-
+    // console.log(response);
     if (response.ok) {
       statusMsg.textContent = "Thanks for subscribing!";
-      console.log("yes");
+      statusMsg.style.textAlign = "center";
+      statusMsg.style.color = "green";
+      // console.log("yes");
       form.reset();
     } else {
       statusMsg.textContent = "Oops! Something went wrong.";
-      console.log("oops");
+      statusMsg.style.textAlign = "center";
+      statusMsg.style.color = "red";
+      // console.log("oops");
     }
   } catch (error) {
     statusMsg.textContent = "Network error. Try again.";
-
-    console.log(error);
+    statusMsg.style.textAlign = "center";
+    statusMsg.style.color = "red";
   }
-  //   } else {
-  //     console.log("empty input");
-  //     statusMsg.textContent = "Please input your email !!!!";
-  //     statusMsg.style.color = "red";
-  //     statusMsg.style.textAlign = "center";
-  //   }
 });
 
 // GO TO REGISTRATION PAGE

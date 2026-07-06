@@ -6,12 +6,11 @@
 }
 
 body {
-  background: linear-gradient(to right, #0f1d45, #1e3a8a);
+  background: linear-gradient(to right, #f4f5f9, #f4f5f9);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
 .container {
